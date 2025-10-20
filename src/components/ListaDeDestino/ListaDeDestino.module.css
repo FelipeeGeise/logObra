@@ -1,0 +1,212 @@
+.lista {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #eee3e3;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.voltarButton {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.imageCell {
+  width: 80px;
+  height: 60px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.lupaButton {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.lupaButton:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.excluir {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.mensagem {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* Modal geral */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent,
+.modalImagemContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.fecharModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  width: 30px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Input e botões */
+.inputSenha {
+  padding: 6px 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonOk {
+  padding: 6px 12px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonTentarNovamente {
+  padding: 6px 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonFechar {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .voltarButton {
+    width: 100%;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .table td {
+    text-align: right;
+    padding: 10px;
+    position: relative;
+    border: none;
+  }
+
+  .imageCell{
+    width: 100%;
+    height: 150px;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+    
+  }
+
+  .excluir {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

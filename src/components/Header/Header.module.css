@@ -1,0 +1,40 @@
+.header {
+  width: 100%;                   /* ocupa toda a largura disponível */
+  max-width: 1000px;             /* limita a largura máxima no desktop */
+  height: 100px;
+  border-radius: 0 0 20px 20px;
+  background-color: #daa520;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 30px;
+  margin: 0 auto;                /* centraliza horizontalmente */
+  padding: 0 20px;               /* garante espaçamento interno em telas pequenas */
+  box-sizing: border-box;
+}
+
+/* ============================
+   Responsividade
+   ============================ */
+@media (max-width: 1024px) {
+  .header {
+    font-size: 26px;             /* diminui tamanho da fonte em telas médias */
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 22px;             /* diminui ainda mais em tablets */
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 18px;             /* tamanho ideal para celulares */
+    height: 70px;
+    padding: 0 10px;             /* menos padding em telas muito pequenas */
+  }
+}

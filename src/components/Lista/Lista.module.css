@@ -1,0 +1,291 @@
+/* ============================
+   Container principal da Lista
+   ============================ */
+.lista {
+  width: 100%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #eee3e3;
+  box-sizing: border-box;
+}
+
+/* Título da página */
+.titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Botão de voltar */
+.voltarButton {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.1s, background-color 0.3s;
+}
+
+.voltarButton:active {
+  transform: scale(0.98);
+}
+
+.voltarButton:hover {
+  background-color: #217dbb;
+}
+
+/* Mensagem de alerta ou lista vazia */
+.mensagem {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* ============================
+   Tabela
+   ============================ */
+.tableWrapper {
+  width: 100%;
+  overflow-x: hidden; /* remove scroll horizontal */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #eee3e3;
+}
+
+.table tr:hover {
+  background-color: #e7ae3c;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Célula de imagem */
+.imageCell {
+  width: 80px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.imageCell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Não estampada automaticamente */
+  transition: transform 0.3s;
+}
+
+.imageCell img:hover {
+  transform: scale(1.05); /* efeito hover sutil */
+}
+
+/* ============================
+   Botões
+   ============================ */
+.excluir {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.excluir:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* ============================
+   Modal
+   ============================ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  width: 95%;
+  max-width: 500px;
+}
+
+.fecharModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.inputSenha {
+  padding: 6px 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.buttonOk {
+  padding: 8px 16px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonTentarNovamente {
+  padding: 8px 16px;
+  background-color: #f33712;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonFechar {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ============================
+   RESPONSIVIDADE
+   ============================ */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .voltarButton {
+    width: 100%;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* transforma tabela em cards */
+  .table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
+    display: none; /* esconde cabeçalho */
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /* Imagem maior no responsivo */
+  .imageCell {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  .imageCell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* somente responsivo */
+  }
+
+  .excluir {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .inputSenha {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo {
+    font-size: 1.2rem;
+  }
+
+  .table td {
+    padding-left: 45%;
+  }
+
+  .imageCell {
+    height: 220px; /* altura ajustada para telas bem pequenas */
+  }
+
+  .excluir {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inputSenha {
+    width: 95%;
+  }
+
+  .voltarButton {
+    font-size: 14px;
+  }
+}

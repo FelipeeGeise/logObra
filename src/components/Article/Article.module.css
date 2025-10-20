@@ -1,0 +1,111 @@
+/* ============================
+   Container principal do Article
+   ============================ */
+.divImage {
+  display: flex;                   /* imagem e botões lado a lado */
+  flex-direction: column;             /* horizontal */
+  align-items: center;             /* centraliza verticalmente */
+  justify-content: flex-start;     /* alinha à esquerda */
+  gap: 20px;                       /* espaço entre imagem e botões */
+  width: 100%;                     /* ocupa todo espaço disponível do pai */
+  max-width: 600px;                /* limita tamanho máximo */
+  height: 250px;                   /* altura fixa */
+  padding: 15px;
+  background-color: #222222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.imageSelect {
+  width: 250px !important;   /* força largura de 250px */
+  height: 300px !important;  /* força altura de 250px */
+  border: 2px solid #ad4306;
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+
+/* Texto acima da imagem */
+.divImage p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #daa520;
+  margin-bottom: 0;                 /* sem espaçamento extra */
+  text-align: center;
+}
+
+/* Container dos botões dentro do Article */
+.divButtons {
+  display: flex;
+  flex-direction: column;           /* botões empilhados verticalmente */
+  gap: 10px;                        /* espaço entre os botões */
+  justify-content: center;          /* centraliza verticalmente em relação à imagem */
+  flex: 1;                          /* ocupa o restante do espaço ao lado da imagem */
+}
+
+/* Botões padrão de imagem */
+.buttonImage,
+.buttonFoto {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #222222;
+  color: #daa520;
+  border: 2px solid #daa520;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Efeito hover */
+.buttonImage:hover,
+.buttonFoto:hover {
+  background-color: #daa520;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ============================
+   Responsividade
+   ============================ */
+@media (max-width: 1024px) {
+  .divImage {
+    flex-direction: column;         /* empilha imagem e botões em telas médias */
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .imageSelect {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .divImage {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageSelect {
+    width: 120px;
+    height: 120px;
+  }
+
+  .buttonImage,
+  .buttonFoto {
+    width: 120px;
+    font-size: 12px;
+    height: 40px;
+  }
+}

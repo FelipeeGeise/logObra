@@ -1,0 +1,288 @@
+/* ============================
+   Container principal do Aside
+   ============================ */
+.caixaAside {
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================
+   Seção interna
+   ============================ */
+.sectionAside {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* ============================
+   Formulário principal
+   ============================ */
+.formAside {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background: #222222;
+  color: #222222;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* ============================
+   Container para selects (Obra + Responsável)
+   ============================ */
+.selectGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0; /* importante para que width 100% funcione */
+}
+
+.selectAside,
+.select {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+/* ============================
+   Bloco imagem + textarea
+   ============================ */
+.imgObs {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.divImgAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #daa520;
+  padding: 10px;
+  border-radius: 10px;
+  width: 230px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  box-sizing: border-box;
+}
+
+.imgAside {
+ 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  border-radius: 8px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonFoto {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.selecionar,
+.tirarFoto {
+  width: 100px;
+  background: #222222;
+  color: #daa520;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+  background: #daa520;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  box-sizing: border-box;
+}
+
+.textearea {
+  font-size: 16px;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #222222;
+  color: #daa520;
+}
+
+/* ============================
+   Botões Salvar e Lista
+   ============================ */
+.salvaLista {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buttonSalvar,
+.buttonLista {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #222222;
+  color: #daa520;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+
+/* ============================
+   RESPONSIVIDADE
+   ============================ */
+@media (max-width: 1024px) {
+  .sectionAside {
+    width: 90%;
+    gap: 15px;
+  }
+
+  .formAside {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .selectGroup {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Selects agora ocupam 100% da largura do container */
+  .selectAside,
+  .select {
+    width: 100%;
+  }
+
+  .imgObs {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .divImgAside,
+  .texto {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .textearea {
+    height: 150px;
+  }
+
+  .buttonFoto {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .selecionar,
+  .tirarFoto {
+    width: 100%;
+  }
+
+  .salvaLista {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttonSalvar,
+  .buttonLista {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionAside {
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .formAside {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .selectGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selectContainer {
+    width: 100%; /* força ocupar toda largura do container */
+  }
+
+  .selectAside,
+  .select {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .imgObs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .divImgAside,
+  .texto {
+    width: 100%;
+  }
+
+  .textearea {
+    height: 120px;
+    font-size: 14px;
+  }
+
+  .buttonFoto {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .selecionar,
+  .tirarFoto {
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .salvaLista {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttonSalvar,
+  .buttonLista {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+}

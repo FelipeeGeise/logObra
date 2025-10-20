@@ -1,0 +1,35 @@
+.nav {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  
+}
+
+.nav li {
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100px;
+  background-color: #222222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* sombra suave */
+}
+
+
+.nav a {
+  text-decoration: none;
+   color: #daa520;
+  font-weight: bold;
+}
+
+
+.nav li:active{
+    background-color: #daa520;
+}
